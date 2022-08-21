@@ -104,6 +104,7 @@ StorageChangeSet:
 	value - plain_storage_key + value
 */
 const AccountChangeSet = "AccountChangeSet"
+const AccountPostChangeSet = "AccountPostChangeSet"
 const StorageChangeSet = "StorageChangeSet"
 
 const (
@@ -457,6 +458,7 @@ var ChaindataTables = []string{
 	PlainState,
 	PlainContractCode,
 	AccountChangeSet,
+	AccountPostChangeSet,
 	StorageChangeSet,
 	Senders,
 	HeadBlockKey,
@@ -605,6 +607,7 @@ var ChaindataTablesCfg = TableCfg{
 		DupToLen:                  40,
 	},
 	AccountChangeSet: {Flags: DupSort},
+	AccountPostChangeSet: {Flags: DupSort},
 	StorageChangeSet: {Flags: DupSort},
 	PlainState: {
 		Flags:                     DupSort,
